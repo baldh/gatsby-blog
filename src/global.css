@@ -1,0 +1,24 @@
+:root {
+    --red-primary: #fd506c;
+    --red-light: #fff4f4;
+    --gray-darkest: #2f2a2a;
+    --gray-dark: #5e5656;
+    --gray-light: #bbacac;
+    --gray-lightest: #efe8e8;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body{
+    font-family: sans-serif;
+    color: var(--gray-darkest);
+    font-size: 18px;
+    line-height: 1.4;
+}
+
+body{
+    margin: 0;
+}

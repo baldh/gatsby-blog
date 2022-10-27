@@ -1,0 +1,23 @@
+{
+  "name": "gatsby-blog",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/baldh/gatsby-blog.git",
+  "author": "baldh <baldhokri1@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "develop": "gatsby develop",
+    "build": "gatsby build",
+    "clean": "gatsby clean"
+  },
+  "dependencies": {
+    "gatsby": "^4.24.5",
+    "gatsby-plugin-image": "^2.24.0",
+    "gatsby-plugin-sharp": "^4.24.0",
+    "gatsby-source-filesystem": "^4.24.0",
+    "nanoid": "^4.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "remixicon": "^2.5.0"
+  }
+}
