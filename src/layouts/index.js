@@ -1,1 +1,1 @@
-export {default as Site} from "./site"
+export {default as Layout} from "./site"

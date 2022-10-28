@@ -4,7 +4,7 @@ import {StaticImage} from 'gatsby-plugin-image'
 import HeaderNav from './headerNav'
 import {header, headerContent, siteIcon} from './header.module.css'
 
-const Header = () => (
+const HeaderLayout = () => (
   <header className={header}>
     <div className={headerContent}>
       <Link to={"/"}>
@@ -19,4 +19,4 @@ const Header = () => (
   </header>
 )
 
-export default Header
+export default HeaderLayout

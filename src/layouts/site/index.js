@@ -1,12 +1,14 @@
 import * as React from 'react'
-import Header from '../header'
-import Main from '../main'
+import {Seo} from '../../components/seo'
+import HeaderLayout from '../header'
+import MainLayout from '../main'
 
-export default function Site({children}) {
+export default function SiteLayout({children}) {
   return (
     <>
-      <Header/>
-      <Main>{children}</Main>
+      <Seo/>
+      <HeaderLayout/>
+      <MainLayout>{children}</MainLayout>
     </>
   )
 }

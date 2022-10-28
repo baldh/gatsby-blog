@@ -1,7 +1,7 @@
 const navMenuItems = [
   {
     name: "Blog",
-    link: "/blog"
+    link: "/post"
   },
   {
     name: "Resources",
