@@ -32,7 +32,7 @@ exports.createPages = async ({graphql, actions, reporter}) => {
 
   //Create blog post pages
   const posts = result.data.allMdx.nodes
-  const files = result.data.allFiles.nodes
+  const files = result.data.allFile.nodes
   const getFilename = (files, path) => (
     files.filter(file=> file.absolutePath === path)[0].name
   )

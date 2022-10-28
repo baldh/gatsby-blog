@@ -7,7 +7,6 @@ const shortcodes = {Link} //provide components that you're going to use in MDX f
 export default function PostLayout({data, children}) {
   return (
     <>
-      <h1>{data.mdx.frontmatter.title}</h1>
       <MDXProvider components={shortcodes}>
         {children}
       </MDXProvider>
