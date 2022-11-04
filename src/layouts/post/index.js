@@ -5,6 +5,7 @@ import {MDXProvider} from '@mdx-js/react'
 const shortcodes = {Link} //provide components that you're going to use in MDX file
 
 export default function PostLayout({data, children}) {
+  console.log(data)
   return (
     <>
       <MDXProvider components={shortcodes}>

@@ -1,3 +1,12 @@
+const wrapESMPlugin = name =>
+  function wrapESM(opts) {
+    return async (...args) => {
+      const mod = await import(name)
+      const plugin = mod.default(opts)
+      return plugin(...args)
+    }
+  }
+
 module.exports = {
   siteMetadata: {
     siteUrl: "https://yourdomain.tld",
@@ -10,7 +19,7 @@ module.exports = {
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
     /*
-    * The following set of plugins are used to transform .mdx files in "/post" directory
+    * The following set of plugins are used to create blogposts from .mdx files in /posts folder
     * */
     {
       resolve: `gatsby-source-filesystem`,
@@ -19,6 +28,20 @@ module.exports = {
         path: `${__dirname}/posts`
       }
     },
-    `gatsby-plugin-mdx`
+    {
+      resolve: `gatsby-plugin-page-creator`,
+      options: {
+        path: `${__dirname}/posts`
+      }
+    },
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        mdxOptions: {
+          rehypePlugins: [wrapESMPlugin('rehype-slug')]
+        }
+        //gatsbyRemarkPlugins: [ `gatsby-remark-autolink-headers` ],
+      },
+    }
   ]
 }

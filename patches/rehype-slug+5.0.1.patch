@@ -1,0 +1,13 @@
+diff --git a/node_modules/rehype-slug/package.json b/node_modules/rehype-slug/package.json
+index fbd9398..1021618 100644
+--- a/node_modules/rehype-slug/package.json
++++ b/node_modules/rehype-slug/package.json
+@@ -24,7 +24,7 @@
+     "Titus Wormer <tituswormer@gmail.com> (https://wooorm.com)"
+   ],
+   "sideEffects": false,
+-  "type": "module",
++
+   "types": "index.d.ts",
+   "main": "index.js",
+   "files": [
